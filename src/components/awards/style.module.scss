@@ -60,6 +60,7 @@
 }
 
 .awardsItem {
+  position: relative;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -72,6 +73,70 @@
     gap: 10px;
     width: 262px;
     height: 262px;
+  }
+}
+
+.awardsItem:first-of-type::before {
+  content: "";
+  position: absolute;
+  width: 136px;
+  opacity: 0.2;
+  border: 1px solid #ffffff;
+  bottom: 75px;
+  right: -85px;
+  transform: rotate(90deg);
+
+  @include tablet {
+    width: 250px;
+    bottom: 140px;
+    right: -140px;
+  }
+}
+.awardsItem:first-of-type::after {
+  content: "";
+  position: absolute;
+  width: 136px;
+  opacity: 0.2;
+  border: 1px solid #ffffff;
+  bottom: -15px;
+  left: 0;
+
+  @include tablet {
+    width: 250px;
+    bottom: -15px;
+    left: 0;
+  }
+}
+
+.awardsItem:last-of-type::before {
+  content: "";
+  position: absolute;
+  width: 136px;
+  opacity: 0.2;
+  border: 1px solid #ffffff;
+  bottom: 75px;
+  left: -80px;
+  transform: rotate(90deg);
+
+  @include tablet {
+    width: 250px;
+    bottom: 120px;
+    left: -140px;
+  }
+}
+.awardsItem:last-of-type::after {
+  content: "";
+  position: absolute;
+  width: 136px;
+  opacity: 0.2;
+  border: 1px solid #ffffff;
+  top: -15px;
+  left: 15px;
+
+  @include tablet {
+    width: 250px;
+    top: -15px;
+    left: 15px;
   }
 }
 
