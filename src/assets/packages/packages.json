@@ -1,0 +1,42 @@
+{
+  "articles": [
+    {
+      "title": "Community Building Package",
+      "price": "$ 3,000",
+      "text": [
+        "Community Management 24/7",
+        "Promotion in blockchain platforms",
+        "Maintain Activeness in community",
+        "Social Media Content Creation",
+        "Social Media Management",
+        "Twitter Followers Organic Growth",
+        "Weekly Community Data Report"
+      ]
+    },
+    {
+      "title": "IEO Marketing Package",
+      "price": "$ 7,900",
+      "text": [
+        "20 Page Whitepaper creation",
+        "Standard English PR Marketing",
+        "4 Crypto Investor Influencer Promotions",
+        "2 Crypto Audience Online Events",
+        "Daily Support & Weekly Reporting"
+      ]
+    },
+    {
+      "title": "NFT Generative Art Solution Package",
+      "price": "$ 12,500",
+      "text": [
+        "Smart Contract Testnet Development",
+        "Smart Contract Mainnet Development",
+        "PFP NFTs Minting Function Development",
+        "Basic Generative Artwork Solution",
+        "MetaMask Integration",
+        "Basic Web Development",
+        "Full After-Deployment Support",
+        "Daily Support & Weekly Reporting"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+@import "../../style_utils/variables";
+@import "../../style_utils/mixins";
+
+// --------------------- ADVANTAGES ------------------------
+
+.section {
+  background: var(--primary-background-color);
+  padding: 53px 38px 146px 38px;
+}
+
+.advantages {
+}
+
+.advantagesTitle {
+  color: var(--black-text-color);
+  @include fonts(700, 40, 1.25);
+  text-align: center;
+
+  @include tablet {
+    @include fonts(700, 55, 1.05);
+  }
+}
+
+.advantagesSubtitle {
+  color: var(--primary-text-color);
+  @include fonts(400, 18, 1.56);
+  text-align: center;
+  margin-top: 23px;
+  margin-bottom: 20px;
+
+  @include tablet {
+    margin-top: 30px;
+    margin-bottom: 45px;
+  }
+}
+
+.advantagesList {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  justify-content: center;
+  align-items: center;
+  @include tablet {
+    flex-direction: row;
+  }
+}
+
+.advantagesListItem {
+  box-sizing: border-box;
+  width: 296px;
+  height: 379px;
+  padding: 30px;
+  background-color: var(--cards-background-color);
+
+  @include tablet {
+    width: 350px;
+    height: 379px;
+  }
+}
+
+.cardImage {
+  width: 69px;
+  height: 69px;
+}
+
+.cardTitle {
+  display: flex;
+  flex-direction: column;
+  color: var(--black-text-color);
+  @include fonts(600, 24, 1.42);
+  max-width: 220px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  @include tablet {
+    @include fonts(600, 20, 1.2);
+    max-width: 185px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    min-height: 72px;
+  }
+
+  @include min-desktop {
+    @include fonts(600, 22, 1.36);
+    max-width: 185px;
+    margin-top: 34px;
+    margin-bottom: 20px;
+    min-height: 0;
+  }
+}
+
+.cardText {
+  color: var(--primary-text-color);
+  @include fonts(400, 16, 1.75);
+
+  @include min-max-tablet {
+    @include fonts(400, 14, 1.5);
+  }
+}
+
+// --------------------- ACHIEVEMENT ------------------------
+
+.achievementTitle {
+  color: var(--black-text-color);
+  text-align: center;
+  margin-top: 83px;
+  margin-bottom: 123px;
+  @include fonts(700, 40, 1.05);
+
+  @include tablet {
+    margin-top: 120px;
+    margin-bottom: 123px;
+    @include fonts(700, 55, 1.25);
+  }
+}
+
+.achievementList {
+  @include flexBase;
+  gap: 115px;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include tablet {
+    gap: 60px;
+    flex-direction: row;
+  }
+
+  @include min-desktop {
+    gap: 144px;
+  }
+}
+
+.achievementListItem {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background-color: var(--cards-background-color);
+  color: var(--primary-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.achievementListItem:first-child::before {
+  content: url("../../assets/advantage/half-ellipse.svg");
+  position: absolute;
+  top: -40px;
+}
+
+.achievementListItem:nth-child(2)::before {
+  content: url("../../assets/advantage/half-ellipse.svg");
+  position: absolute;
+  bottom: 20px;
+  right: -100px;
+  transform: rotate(90deg);
+}
+.achievementListItem:last-child::before {
+  content: url("../../assets/advantage/half-ellipse.svg");
+  position: absolute;
+  bottom: -40px;
+  transform: rotate(180deg);
+}
+
+.achievementListItem p:first-child {
+  @include fonts(600, 18, 1.89);
+}
+
+.achievementListItem p:nth-child(2) {
+  @include fonts(700, 30, 1);
+  text-align: center;
+}

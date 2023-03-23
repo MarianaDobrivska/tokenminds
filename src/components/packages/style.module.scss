@@ -1,0 +1,143 @@
+@import "../../style_utils/variables";
+@import "../../style_utils/mixins";
+
+.packages {
+  position: relative;
+  background: var(--secondary-background-color);
+  display: flex;
+  flex-direction: column;
+
+  max-width: 1600px;
+  padding: 51px 25px 45px 25px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  background-image: url("../../assets/packages/packages-desktop-1x-min.png");
+
+  @include retina {
+    background-image: url("../../assets/packages/packages-mobile-2x-min.png");
+  }
+
+  @include tablet {
+    padding: 90px 45px 45px 45px;
+    background-image: url("../../assets/packages/packages-desktop-1x-min.png");
+    @include retina {
+      background-image: url("../../assets/packages/packages-desktop-2x-min.png");
+    }
+  }
+}
+
+.packagesTitle {
+  color: var(--black-text-color);
+  @include fonts(700, 40, 1.25, 0.03em);
+  text-align: center;
+  margin-bottom: 50px;
+
+  @include tablet {
+    @include fonts(700, 55, 1.18, 0.03em);
+    margin-bottom: 70px;
+  }
+}
+.packagesCardsList {
+  @include flexBase;
+  gap: 30px;
+}
+
+.packagesCard {
+  box-sizing: border-box;
+  position: relative;
+  width: 320px;
+  height: 615px;
+  padding: 50px 20px 60px 25px;
+  background-color: var(--primary-background-color);
+  box-shadow: 0px 6px 50px rgba(200, 0, 200, 0.04);
+
+  @include tablet {
+    width: 350px;
+    height: 655px;
+  }
+}
+.packagesCard:first-child::before {
+  content: url("../../assets/packages/pink-triangle.svg");
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.packagesCard:nth-child(2)::before {
+  content: url("../../assets/packages/pink-triangle.svg");
+  transform: rotate(90deg);
+  position: absolute;
+  right: -24px;
+  top: 106px;
+}
+
+.packagesCard:nth-child(3)::before {
+  content: url("../../assets/packages/pink-triangle.svg");
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.packagesCard:not(:first-child) {
+  @include max-mobile {
+    display: none;
+  }
+}
+
+.cardTitle {
+  color: var(--black-text-color);
+  @include fonts(600, 24, 1.42);
+  text-align: left;
+
+  @include tablet {
+    max-width: 180px;
+    @include fonts(600, 16, 1.43);
+  }
+
+  @include min-desktop {
+    max-width: 210px;
+    @include fonts(600, 21, 1.43);
+  }
+}
+
+.cardPrice {
+  color: var(--black-text-color);
+  @include fonts(700, 40, 0.6);
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 25px;
+
+  @include min-max-tablet {
+    @include fonts(700, 24, 0.6);
+  }
+}
+
+.cardList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 25px;
+}
+
+.cardListItem {
+  position: relative;
+  color: var(--primary-text-color);
+  @include fonts(400, 16, 1);
+
+  @include min-max-tablet {
+    @include fonts(400, 14, 1);
+  }
+}
+
+.cardListItem::before {
+  content: url("../../assets/packages/pink-arrow.svg");
+  width: 14px;
+  height: 18px;
+  position: absolute;
+  top: 0;
+  left: -25px;
+}
